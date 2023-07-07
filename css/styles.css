@@ -335,20 +335,27 @@ button:focus {
 #doctransButton,
 #subtransButton,
 #synthesisButton,
-#recordStartButton,
-#recordEndButton,
+#recordStartButton1,
+#recordEndButton1,
 #transcribeButton,
 #requestButton {
     background-color: var(--trebe-blue) !important;
 }
 
+#recordStartButton,
+#stopRecordingButton,
+#continueRecordingButton,
+#recordEndButton,
+#cancelRecordingButton {
+    background-color: transparent;
+        background-color: var(--trebe-blue) !important;
+        white-space: nowrap; /* Evitar salto de línea */
+
+}
+
 #doctransButton,
 #subtransButton {
     width: 35% !important;
-}
-
-#transcribeButton {
-    width: 40% !important;
 }
 
 #clipboard {

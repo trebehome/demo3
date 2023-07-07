@@ -177,50 +177,33 @@
         </div>
     </div>
 </div></div>
-        <div class="row m-0 mt-3">
+        <div class="row justify-content-center m-0 mt-3">
             <div class="col-lg-5 col-12 row align-content-center gap-2 mt-lg-0 mt-4 pe-lg-5">
                 <div class="col-12 text-center">
-                    
-                    
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row justify-content-center gap-2">
-                                <div class="col-2">
-                                    <button type="button" class="btn m-1 mt-2 text-white" id="recordStartButton" aria-label="recordStartButton"> 🔴</button>
-                                </div>
-                                <div class="col-2">
-                                    <button type="button" class="btn m-1 mt-2 text-white" id="recordEndButton" aria-label="recordEndButton" disabled> 💾</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="row justify-content-center">
-                                <div class="col-2">
-                                    <button type="button" class="btn m-1 mt-2 text-white d-none" id="stopRecordingButton" aria-label="stopRecordingButton" disabled> ⏹️</button>
-                                </div>
-                                <div class="col-2">
-                                    <button type="button" class="btn m-1 mt-2 text-white d-none" id="continueRecordingButton" aria-label="continueRecordingButton" disabled> ⏯️</button>
-                                </div>
-                                <div class="col-2">
-                                    <button type="button" class="btn m-1 mt-2 text-white d-none" id="cancelRecordingButton" aria-label="cancelRecordingButton" disabled> ❌</button>
-                                </div>
-                                <div class="col-2">
-                                    <button type="button" class="btn m-1 mt-2 text-white d-none" id="newRecordingButton" aria-label="newRecordingButton" disabled></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            
+                  
+                        <button type="button" class="btn m-1 mt-2 text-white" id="recordStartButton" aria-label="recordStartButton">
+                            Iniciar a gravación
+                        </button>
+                        <button type="button" class="btn m-1 mt-2 text-white" id="recordEndButton" aria-label="recordEndButton">
+                            Finalizar a gravación
+                        </button>
+
+                        <p id="duration">Duracion</p>
+
+                        <button type="button" class="btn m-1 mt-2 text-white d-none" id="stopRecordingButton" aria-label="stopRecordingButton" disabled> ⏹️</button>
+                        <button type="button" class="btn m-1 mt-2 text-white d-none" id="newRecordingButton" aria-label="newRecordingButton" disabled></button>
+                        <button type="button" class="btn m-1 mt-2 text-white d-none" id="cancelRecordingButton" aria-label="cancelRecordingButton" disabled> ❌</button>
+                        <button type="button" class="btn m-1 mt-2 text-white d-none" id="continueRecordingButton" aria-label="continueRecordingButton" disabled> ⏯️</button>
+
+                   
                 </div>
-            
-                <div class="col-12 text-center">
-                    <p id="duration">Duracion</p>
-                </div>
-                
+
+
+
+
                 <div class="col-12 text-center">
                     <audio class="btn col-lg-11 col-md-8 col-12" controls playsinline></audio>
                 </div>
-            
                 <div class="col-12 my-lg-5 my-lg-5 my-3">
                     <div class="text-center mb-2">
                         <div id="loading_file">
@@ -229,7 +212,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="col-lg-7 col-12 ps-lg-5 pe-lg-0 text-center" id="transcriptionBox">
                 <label for="outputTranscription" class="hidden-label">Output</label>
                 <textarea class="col-12 rounded-3" id="outputTranscription" rows="12" disabled></textarea>
@@ -247,7 +229,7 @@
                     </button>
                 </div>
             </div>
-
+        </div>
     </div>
 </div>
 
