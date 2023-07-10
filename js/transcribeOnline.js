@@ -51,6 +51,9 @@ recordStart.onclick = () => {
   
             // Set audio source
             document.querySelector("audio").src = URL.createObjectURL(blob);
+
+            // Transcribe audio
+            audioTranscribe(blob);
           };
   
           // Event listener when data is sent
@@ -130,46 +133,46 @@ recordStop.onclick = () => {
   audioTranscribe(new Blob(chunks, { "type": "audio/wav; codecs=0" }));
   };
   
-  // Cancel recording
-  cancelButton.onclick = () => {
-    mediaRecorder = null; // Reset recorder
-    chunks = [];          // Reset chunks
-  
-    // Reset audio source
-    document.querySelector("audio").src = "";
-  
-    // Enable/disable control buttons
-    recordStart.disabled = false;
-    recordStop.disabled = true;
-    resumeButton.disabled = true;
-    cancelButton.disabled = true;
-    newRecordingButton.disabled = false;
-  
-    // Reload the page
-    location.reload();
-  };
-  
-  // Actualizar el contador de tiempo
-  function updateDuration() {
-    const currentTime = totalDuration + Math.round((Date.now() - startTime) / 1000);
-    durationDisplay.textContent = `${currentTime} s`;
-  }
-  
-  // New recording
-  newRecordingButton.onclick = () => {
-    mediaRecorder = null; // Reset recorder
-    chunks = [];          // Reset chunks
-  
-    // Reset audio source
-    document.querySelector("audio").src = "";
-  
-    // Enable/disable control buttons
-    recordStart.disabled = false;
-    recordStop.disabled = true;
-    resumeButton.disabled = true;
-    cancelButton.disabled = false;
-    newRecordingButton.disabled = true;
-  };
+                      // Cancel recording
+                      cancelButton.onclick = () => {
+                        mediaRecorder = null; // Reset recorder
+                        chunks = [];          // Reset chunks
+                      
+                        // Reset audio source
+                        document.querySelector("audio").src = "";
+                      
+                        // Enable/disable control buttons
+                        recordStart.disabled = false;
+                        recordStop.disabled = true;
+                        resumeButton.disabled = true;
+                        cancelButton.disabled = true;
+                        newRecordingButton.disabled = false;
+                      
+                        // Reload the page
+                        location.reload();
+                      };
+                      
+                      // Actualizar el contador de tiempo
+                      function updateDuration() {
+                        const currentTime = totalDuration + Math.round((Date.now() - startTime) / 1000);
+                        durationDisplay.textContent = `${currentTime} s`;
+                      }
+                      
+                      // New recording
+                      newRecordingButton.onclick = () => {
+                        mediaRecorder = null; // Reset recorder
+                        chunks = [];          // Reset chunks
+                      
+                        // Reset audio source
+                        document.querySelector("audio").src = "";
+                      
+                        // Enable/disable control buttons
+                        recordStart.disabled = false;
+                        recordStop.disabled = true;
+                        resumeButton.disabled = true;
+                        cancelButton.disabled = false;
+                        newRecordingButton.disabled = true;
+                      };
 
 
 
